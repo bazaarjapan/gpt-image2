@@ -15,8 +15,13 @@ Character reference requirements:
 - Never swap character identities. Do not give Akari's face or clothes to MAI, do not give MAI's android seams to Akari, and do not mix GRAVE armor with any human character.
 - Do not redesign faces, hairstyles, outfits, body proportions, or GRAVE's armor silhouette.
 
+Continuity requirements:
+- If adjacent page images are attached, use them only as continuity references for background atmosphere, lighting, debris, smoke, and location.
+- Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
+- For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
+
 Manga panel layout requirement:
-10 panels: silence and hesitation. Use tiny footstep panels, a memory panel floating in white space, and a large turn-back panel.
+10 panels: silence and hesitation inside the same collapsed ruin as pages 18 and 20. The background must continue directly from the adjacent pages: shattered concrete, rubble piles, smoke, broken walls, dust, torn rebar, and distant ruined buildings. No park, no trees, no clean road, no peaceful walkway. Use tiny footstep panels, a memory panel floating in smoky white space, and a large turn-back panel.
 
 Panel script:
 ## 1コマ目

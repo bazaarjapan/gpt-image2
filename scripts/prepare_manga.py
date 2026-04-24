@@ -237,7 +237,7 @@ def page_layout_instruction(page: Page, panel_count: int) -> str:
         16: "12 panels: delicate conversation rhythm. Use many small quiet reaction panels, a silent beat, and a close-up of MAI's eyes for the unclassified reaction. Let the page breathe despite many panels.",
         17: "6 panels: drone detection tension, then a huge wall-destruction impact panel that breaks panel borders. Use debris, black speed lines, and tilted frames.",
         18: "8 panels: collapsing ruin action. Use diagonal falling rubble panels, smoke-obscured close-ups, and a tall panel of MAI supporting Akari.",
-        19: "10 panels: silence and hesitation. Use tiny footstep panels, a memory panel floating in white space, and a large turn-back panel.",
+        19: "10 panels: silence and hesitation inside the same collapsed ruin as pages 18 and 20. The background must continue directly from the adjacent pages: shattered concrete, rubble piles, smoke, broken walls, dust, torn rebar, and distant ruined buildings. No park, no trees, no clean road, no peaceful walkway. Use tiny footstep panels, a memory panel floating in smoky white space, and a large turn-back panel.",
         20: "9 panels: emotional climax. Build from small close-up panels to a large final panel of MAI making a micro-expression. Do not make MAI smile broadly. Final panel should dominate the bottom third.",
         21: "8 panels: duel setup. Use Akari fleeing in a narrow foreground strip, then a massive confrontation panel with MAI small against GRAVE. Strong scale contrast.",
         22: "9 panels: sacrifice sequence. Tight core close-ups, calm face close-up, then a large white flash panel. The final flash should dominate the page and swallow panel borders.",
@@ -283,6 +283,15 @@ def reference_keys_for_page(page: Page) -> list[str]:
     return mapping.get(page.number, ["mai", "akari", "toya", "grave", "echo"])
 
 
+def context_images_for_page(page: Page, output_format: str) -> list[str]:
+    if page.number == 19:
+        return [
+            f"images/pages/page_18.{output_format}",
+            f"images/pages/page_20.{output_format}",
+        ]
+    return []
+
+
 def character_names_for_keys(keys: list[str]) -> str:
     names = {
         "mai": "MAI / マアイ",
@@ -299,6 +308,7 @@ def build_page_prompt(page: Page) -> str:
     panels = parse_panels(page)
     dialogue = format_dialogue(page)
     reference_keys = reference_keys_for_page(page)
+    context_images = context_images_for_page(page, "png")
     return f"""\
 # P{page.number:02d} {page.title}
 
@@ -316,6 +326,11 @@ Character reference requirements:
 - Match each named character to their own attached reference image exactly.
 - Never swap character identities. Do not give Akari's face or clothes to MAI, do not give MAI's android seams to Akari, and do not mix GRAVE armor with any human character.
 - Do not redesign faces, hairstyles, outfits, body proportions, or GRAVE's armor silhouette.
+
+Continuity requirements:
+- If adjacent page images are attached, use them only as continuity references for background atmosphere, lighting, debris, smoke, and location.
+- Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
+- For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
 
 Manga panel layout requirement:
 {page_layout_instruction(page, len(panels))}
@@ -436,6 +451,7 @@ def main() -> None:
                 "output_file": f"{config['images_dir']}/pages/page_{page.number:02d}.{config['output_format']}",
                 "lettered_file": f"{config['images_dir']}/lettered/page_{page.number:02d}.{config['output_format']}",
                 "reference_keys": reference_keys_for_page(page),
+                "context_images": context_images_for_page(page, config["output_format"]),
             }
         )
 

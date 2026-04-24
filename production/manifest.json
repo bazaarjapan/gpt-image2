@@ -63,7 +63,8 @@
       "lettered_file": "images/lettered/page_01.png",
       "reference_keys": [
         "mai"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 2,
@@ -74,7 +75,8 @@
       "reference_keys": [
         "mai",
         "toya"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 3,
@@ -85,7 +87,8 @@
       "reference_keys": [
         "mai",
         "toya"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 4,
@@ -97,7 +100,8 @@
         "mai",
         "toya",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 5,
@@ -109,7 +113,8 @@
         "mai",
         "toya",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 6,
@@ -122,7 +127,8 @@
         "toya",
         "akari",
         "grave"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 7,
@@ -135,7 +141,8 @@
         "toya",
         "akari",
         "grave"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 8,
@@ -146,7 +153,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 9,
@@ -157,7 +165,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 10,
@@ -168,7 +177,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 11,
@@ -180,7 +190,8 @@
         "mai",
         "akari",
         "grave"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 12,
@@ -191,7 +202,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 13,
@@ -202,7 +214,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 14,
@@ -214,7 +227,8 @@
         "mai",
         "akari",
         "toya"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 15,
@@ -225,7 +239,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 16,
@@ -236,7 +251,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 17,
@@ -248,7 +264,8 @@
         "mai",
         "akari",
         "grave"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 18,
@@ -260,7 +277,8 @@
         "mai",
         "akari",
         "grave"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 19,
@@ -271,6 +289,10 @@
       "reference_keys": [
         "mai",
         "akari"
+      ],
+      "context_images": [
+        "images/pages/page_18.png",
+        "images/pages/page_20.png"
       ]
     },
     {
@@ -282,7 +304,8 @@
       "reference_keys": [
         "mai",
         "akari"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 21,
@@ -294,7 +317,8 @@
         "mai",
         "akari",
         "grave"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 22,
@@ -305,7 +329,8 @@
       "reference_keys": [
         "mai",
         "grave"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 23,
@@ -317,7 +342,8 @@
         "akari",
         "toya",
         "mai"
-      ]
+      ],
+      "context_images": []
     },
     {
       "page": 24,
@@ -329,7 +355,8 @@
         "akari",
         "mai",
         "echo"
-      ]
+      ],
+      "context_images": []
     }
   ]
 }

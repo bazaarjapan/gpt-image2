@@ -163,7 +163,11 @@ def reference_paths(config: dict, reference_keys: list[str] | None = None) -> li
     return paths
 
 
-def build_reference_prompt_prefix(config: dict, reference_keys: list[str] | None = None) -> str:
+def build_reference_prompt_prefix(
+    config: dict,
+    reference_keys: list[str] | None = None,
+    context_images: list[str] | None = None,
+) -> str:
     items = selected_reference_items(config, reference_keys)
     lines = [
         "Attached reference image order. Treat these as the strict character design canon:",
@@ -172,6 +176,12 @@ def build_reference_prompt_prefix(config: dict, reference_keys: list[str] | None
         lines.append(f"{index}. {item['role']} ({item['key']})")
     lines.append("Use these exact designs for every matching character. Do not invent alternate costumes, hairstyles, faces, or armor.")
     lines.append("Do not swap character identities. If a reference image is not attached for this job, do not introduce that character.")
+    if context_images:
+        start = len(items) + 1
+        lines.append("Additional attached images after the character references are adjacent manga pages for background continuity only:")
+        for offset, path in enumerate(context_images):
+            lines.append(f"{start + offset}. {path}")
+        lines.append("Use adjacent pages only to match location, debris, smoke, lighting, and mood. Do not copy their panel layout.")
     return "\n".join(lines)
 
 
@@ -183,10 +193,16 @@ def generate_one(
     dry_run: bool,
     use_references: bool,
     reference_keys: list[str] | None,
+    context_images: list[str] | None,
 ) -> None:
     prompt = read_prompt(prompt_path)
     refs = reference_paths(config, reference_keys) if use_references else []
-    prompt_with_refs = f"{build_reference_prompt_prefix(config, reference_keys)}\n\n{prompt}" if refs else prompt
+    for context_image in context_images or []:
+        path = ROOT / context_image
+        if not path.exists():
+            raise FileNotFoundError(f"Context image missing: {path}")
+        refs.append(path)
+    prompt_with_refs = f"{build_reference_prompt_prefix(config, reference_keys, context_images)}\n\n{prompt}" if refs else prompt
     payload = build_payload(config, prompt_with_refs, model_override)
     if dry_run:
         print(
@@ -262,7 +278,7 @@ def main() -> int:
         raise RuntimeError("production/manifest.json is missing. Run: python scripts/prepare_manga.py")
     manifest = load_json(manifest_path)
 
-    jobs: list[tuple[Path, Path, bool, list[str] | None]] = []
+    jobs: list[tuple[Path, Path, bool, list[str] | None, list[str] | None]] = []
     use_refs = bool(config.get("use_reference_images", False)) and not args.no_references
     if args.cover:
         jobs.append(
@@ -271,33 +287,42 @@ def main() -> int:
                 ROOT / config["images_dir"] / f"cover.{config['output_format']}",
                 use_refs,
                 manifest["assets"].get("cover_reference_keys"),
+                None,
             )
         )
 
     if args.characters:
         for character in parse_character_selection(args.characters, manifest.get("characters", [])):
-            jobs.append((ROOT / character["prompt_file"], ROOT / character["output_file"], False, None))
+            jobs.append((ROOT / character["prompt_file"], ROOT / character["output_file"], False, None, None))
 
     if args.pages:
         selected = set(parse_page_selection(args.pages))
         for page in manifest["pages"]:
             if page["page"] in selected:
-                jobs.append((ROOT / page["prompt_file"], ROOT / page["output_file"], use_refs, page.get("reference_keys")))
+                jobs.append(
+                    (
+                        ROOT / page["prompt_file"],
+                        ROOT / page["output_file"],
+                        use_refs,
+                        page.get("reference_keys"),
+                        page.get("context_images"),
+                    )
+                )
 
     if args.prompt:
         if not args.output:
             raise RuntimeError("--output is required when --prompt is used.")
-        jobs.append((ROOT / args.prompt, ROOT / args.output, use_refs, None))
+        jobs.append((ROOT / args.prompt, ROOT / args.output, use_refs, None, None))
 
     if not jobs:
         parser.print_help()
         return 2
 
-    for index, (prompt_path, output_path, job_uses_refs, reference_keys) in enumerate(jobs, start=1):
+    for index, (prompt_path, output_path, job_uses_refs, reference_keys, context_images) in enumerate(jobs, start=1):
         if not prompt_path.exists():
             raise FileNotFoundError(prompt_path)
         print(f"[{index}/{len(jobs)}] {prompt_path.relative_to(ROOT)}")
-        generate_one(config, prompt_path, output_path, args.model, args.dry_run, job_uses_refs, reference_keys)
+        generate_one(config, prompt_path, output_path, args.model, args.dry_run, job_uses_refs, reference_keys, context_images)
         if not args.dry_run and index < len(jobs):
             time.sleep(args.sleep)
 
