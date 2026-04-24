@@ -1,0 +1,335 @@
+{
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "size": "1024x1536",
+  "output_format": "png",
+  "story_file": "ストーリー.md",
+  "spec_file": "漫画制作仕様書.md",
+  "source_lengths": {
+    "story_chars": 10018,
+    "spec_chars": 5109
+  },
+  "assets": {
+    "style_bible": "production/style_bible.md",
+    "character_prompts": "production/character_prompts.md",
+    "cover_prompt": "production/cover_prompt.md",
+    "cover_reference_keys": [
+      "mai",
+      "akari",
+      "grave"
+    ],
+    "dialogue_script": "production/dialogue_script.md",
+    "lettering": "production/lettering.json",
+    "checklist": "production/checklist.md"
+  },
+  "characters": [
+    {
+      "key": "mai",
+      "title": "MAI / マアイ",
+      "prompt_file": "production/character_sheets/mai.md",
+      "output_file": "images/reference/mai.png"
+    },
+    {
+      "key": "akari",
+      "title": "朝倉 灯里",
+      "prompt_file": "production/character_sheets/akari.md",
+      "output_file": "images/reference/akari.png"
+    },
+    {
+      "key": "toya",
+      "title": "朝倉 透也",
+      "prompt_file": "production/character_sheets/toya.md",
+      "output_file": "images/reference/toya.png"
+    },
+    {
+      "key": "grave",
+      "title": "GRAVE / グレイヴ",
+      "prompt_file": "production/character_sheets/grave.md",
+      "output_file": "images/reference/grave.png"
+    },
+    {
+      "key": "echo",
+      "title": "ECHO / エコー",
+      "prompt_file": "production/character_sheets/echo.md",
+      "output_file": "images/reference/echo.png"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "title": "ニュースとタイトル",
+      "prompt_file": "production/page_prompts/page_01.md",
+      "output_file": "images/pages/page_01.png",
+      "lettered_file": "images/lettered/page_01.png",
+      "reference_keys": [
+        "mai"
+      ]
+    },
+    {
+      "page": 2,
+      "title": "透也の部屋",
+      "prompt_file": "production/page_prompts/page_02.md",
+      "output_file": "images/pages/page_02.png",
+      "lettered_file": "images/lettered/page_02.png",
+      "reference_keys": [
+        "mai",
+        "toya"
+      ]
+    },
+    {
+      "page": 3,
+      "title": "目を見たから",
+      "prompt_file": "production/page_prompts/page_03.md",
+      "output_file": "images/pages/page_03.png",
+      "lettered_file": "images/lettered/page_03.png",
+      "reference_keys": [
+        "mai",
+        "toya"
+      ]
+    },
+    {
+      "page": 4,
+      "title": "妹、灯里",
+      "prompt_file": "production/page_prompts/page_04.md",
+      "output_file": "images/pages/page_04.png",
+      "lettered_file": "images/lettered/page_04.png",
+      "reference_keys": [
+        "mai",
+        "toya",
+        "akari"
+      ]
+    },
+    {
+      "page": 5,
+      "title": "玄関チャイム",
+      "prompt_file": "production/page_prompts/page_05.md",
+      "output_file": "images/pages/page_05.png",
+      "lettered_file": "images/lettered/page_05.png",
+      "reference_keys": [
+        "mai",
+        "toya",
+        "akari"
+      ]
+    },
+    {
+      "page": 6,
+      "title": "GRAVE登場",
+      "prompt_file": "production/page_prompts/page_06.md",
+      "output_file": "images/pages/page_06.png",
+      "lettered_file": "images/lettered/page_06.png",
+      "reference_keys": [
+        "mai",
+        "toya",
+        "akari",
+        "grave"
+      ]
+    },
+    {
+      "page": 7,
+      "title": "逃げろ",
+      "prompt_file": "production/page_prompts/page_07.md",
+      "output_file": "images/pages/page_07.png",
+      "lettered_file": "images/lettered/page_07.png",
+      "reference_keys": [
+        "mai",
+        "toya",
+        "akari",
+        "grave"
+      ]
+    },
+    {
+      "page": 8,
+      "title": "逃走",
+      "prompt_file": "production/page_prompts/page_08.md",
+      "output_file": "images/pages/page_08.png",
+      "lettered_file": "images/lettered/page_08.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 9,
+      "title": "廃墟",
+      "prompt_file": "production/page_prompts/page_09.md",
+      "output_file": "images/pages/page_09.png",
+      "lettered_file": "images/lettered/page_09.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 10,
+      "title": "MAIの意味",
+      "prompt_file": "production/page_prompts/page_10.md",
+      "output_file": "images/pages/page_10.png",
+      "lettered_file": "images/lettered/page_10.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 11,
+      "title": "グレイヴの説明",
+      "prompt_file": "production/page_prompts/page_11.md",
+      "output_file": "images/pages/page_11.png",
+      "lettered_file": "images/lettered/page_11.png",
+      "reference_keys": [
+        "mai",
+        "akari",
+        "grave"
+      ]
+    },
+    {
+      "page": 12,
+      "title": "暴走の真相",
+      "prompt_file": "production/page_prompts/page_12.md",
+      "output_file": "images/pages/page_12.png",
+      "lettered_file": "images/lettered/page_12.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 13,
+      "title": "命令だから？",
+      "prompt_file": "production/page_prompts/page_13.md",
+      "output_file": "images/pages/page_13.png",
+      "lettered_file": "images/lettered/page_13.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 14,
+      "title": "嘘の授業",
+      "prompt_file": "production/page_prompts/page_14.md",
+      "output_file": "images/pages/page_14.png",
+      "lettered_file": "images/lettered/page_14.png",
+      "reference_keys": [
+        "mai",
+        "akari",
+        "toya"
+      ]
+    },
+    {
+      "page": 15,
+      "title": "正確な言葉だけでは",
+      "prompt_file": "production/page_prompts/page_15.md",
+      "output_file": "images/pages/page_15.png",
+      "lettered_file": "images/lettered/page_15.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 16,
+      "title": "未分類の反応",
+      "prompt_file": "production/page_prompts/page_16.md",
+      "output_file": "images/pages/page_16.png",
+      "lettered_file": "images/lettered/page_16.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 17,
+      "title": "発見",
+      "prompt_file": "production/page_prompts/page_17.md",
+      "output_file": "images/pages/page_17.png",
+      "lettered_file": "images/lettered/page_17.png",
+      "reference_keys": [
+        "mai",
+        "akari",
+        "grave"
+      ]
+    },
+    {
+      "page": 18,
+      "title": "崩れる廃墟",
+      "prompt_file": "production/page_prompts/page_18.md",
+      "output_file": "images/pages/page_18.png",
+      "lettered_file": "images/lettered/page_18.png",
+      "reference_keys": [
+        "mai",
+        "akari",
+        "grave"
+      ]
+    },
+    {
+      "page": 19,
+      "title": "戻ってきた理由",
+      "prompt_file": "production/page_prompts/page_19.md",
+      "output_file": "images/pages/page_19.png",
+      "lettered_file": "images/lettered/page_19.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 20,
+      "title": "約束",
+      "prompt_file": "production/page_prompts/page_20.md",
+      "output_file": "images/pages/page_20.png",
+      "lettered_file": "images/lettered/page_20.png",
+      "reference_keys": [
+        "mai",
+        "akari"
+      ]
+    },
+    {
+      "page": 21,
+      "title": "マアイ対グレイヴ",
+      "prompt_file": "production/page_prompts/page_21.md",
+      "output_file": "images/pages/page_21.png",
+      "lettered_file": "images/lettered/page_21.png",
+      "reference_keys": [
+        "mai",
+        "akari",
+        "grave"
+      ]
+    },
+    {
+      "page": 22,
+      "title": "これは、私の答えです",
+      "prompt_file": "production/page_prompts/page_22.md",
+      "output_file": "images/pages/page_22.png",
+      "lettered_file": "images/lettered/page_22.png",
+      "reference_keys": [
+        "mai",
+        "grave"
+      ]
+    },
+    {
+      "page": 23,
+      "title": "病院",
+      "prompt_file": "production/page_prompts/page_23.md",
+      "output_file": "images/pages/page_23.png",
+      "lettered_file": "images/lettered/page_23.png",
+      "reference_keys": [
+        "akari",
+        "toya",
+        "mai"
+      ]
+    },
+    {
+      "page": 24,
+      "title": "誰よりも人間らしかった",
+      "prompt_file": "production/page_prompts/page_24.md",
+      "output_file": "images/pages/page_24.png",
+      "lettered_file": "images/lettered/page_24.png",
+      "reference_keys": [
+        "akari",
+        "mai",
+        "echo"
+      ]
+    }
+  ]
+}

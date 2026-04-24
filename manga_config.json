@@ -1,0 +1,38 @@
+{
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "size": "1024x1536",
+  "output_format": "png",
+  "use_reference_images": true,
+  "reference_images": [
+    {
+      "key": "mai",
+      "role": "MAI / マアイ",
+      "path": "images/reference/mai.png"
+    },
+    {
+      "key": "akari",
+      "role": "朝倉 灯里",
+      "path": "images/reference/akari.png"
+    },
+    {
+      "key": "toya",
+      "role": "朝倉 透也",
+      "path": "images/reference/toya.png"
+    },
+    {
+      "key": "grave",
+      "role": "GRAVE / グレイヴ",
+      "path": "images/reference/grave.png"
+    },
+    {
+      "key": "echo",
+      "role": "ECHO / エコー",
+      "path": "images/reference/echo.png"
+    }
+  ],
+  "story_file": "ストーリー.md",
+  "spec_file": "漫画制作仕様書.md",
+  "production_dir": "production",
+  "images_dir": "images"
+}
