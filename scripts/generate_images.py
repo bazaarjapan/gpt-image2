@@ -127,11 +127,11 @@ def save_image_response(response: dict, output_path: Path) -> None:
     raise RuntimeError(f"Unsupported image response shape: {first.keys()}")
 
 
-def build_payload(config: dict, prompt: str, model_override: str | None) -> dict:
+def build_payload(config: dict, prompt: str, model_override: str | None, size_override: str | None = None) -> dict:
     return {
         "model": model_override or config["model"],
         "prompt": prompt,
-        "size": config["size"],
+        "size": size_override or config["size"],
         "quality": config["quality"],
         "output_format": config["output_format"],
         "n": 1,
@@ -195,6 +195,7 @@ def generate_one(
     prompt_path: Path,
     output_path: Path,
     model_override: str | None,
+    size_override: str | None,
     dry_run: bool,
     use_references: bool,
     reference_keys: list[str] | None,
@@ -209,7 +210,7 @@ def generate_one(
             raise FileNotFoundError(f"Context image missing: {path}")
         refs.append(path)
     prompt_with_refs = f"{build_reference_prompt_prefix(config, reference_keys, context_images, enhance_existing)}\n\n{prompt}" if refs else prompt
-    payload = build_payload(config, prompt_with_refs, model_override)
+    payload = build_payload(config, prompt_with_refs, model_override, size_override)
     if dry_run:
         print(
             json.dumps(
@@ -272,6 +273,7 @@ def main() -> int:
     parser.add_argument("--prompt", help="Generate one arbitrary prompt markdown file.")
     parser.add_argument("--output", help="Output file for --prompt.")
     parser.add_argument("--model", help="Override model name, for example gpt-image-1.5 if gpt-image-2 is unavailable.")
+    parser.add_argument("--size", help="Override image size for this run, for example 1536x1024.")
     parser.add_argument("--no-references", action="store_true", help="Do not send images/reference files to the edits endpoint.")
     parser.add_argument("--enhance-existing", action="store_true", help="Send the current output image as a composition reference while regenerating.")
     parser.add_argument("--dry-run", action="store_true", help="Print payloads without calling the API.")
@@ -333,7 +335,7 @@ def main() -> int:
         if not prompt_path.exists():
             raise FileNotFoundError(prompt_path)
         print(f"[{index}/{len(jobs)}] {prompt_path.relative_to(ROOT)}")
-        generate_one(config, prompt_path, output_path, args.model, args.dry_run, job_uses_refs, reference_keys, context_images, args.enhance_existing)
+        generate_one(config, prompt_path, output_path, args.model, args.size, args.dry_run, job_uses_refs, reference_keys, context_images, args.enhance_existing)
         if not args.dry_run and index < len(jobs):
             time.sleep(args.sleep)
 
