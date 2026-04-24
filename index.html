@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>アンドロイド・レクイエム 漫画ビューア</title>
+    <title>ラスト・ライ 漫画ビューア</title>
     <style>
       :root {
         color-scheme: dark;
@@ -105,6 +105,25 @@
         box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
       }
 
+      .relationship {
+        display: grid;
+        place-items: center;
+        margin: 0 auto 3rem;
+      }
+
+      .relationship-title {
+        margin: 0 0 1rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+        letter-spacing: 0.16em;
+      }
+
+      .relationship img {
+        width: min(620px, 94vw);
+        border: 1px solid var(--line);
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.52);
+      }
+
       .reader {
         display: grid;
         gap: clamp(1.2rem, 3vw, 2.5rem);
@@ -193,8 +212,8 @@
   <body>
     <header>
       <div>
-        <h1>アンドロイド・レクイエム</h1>
-        <div class="subtitle">MAIの最後の授業 / 24ページ漫画ビューア</div>
+        <h1>ラスト・ライ</h1>
+        <div class="subtitle">MAI / 24ページ漫画ビューア</div>
       </div>
       <nav class="controls" aria-label="表示操作">
         <button id="modeButton" type="button">見開き表示</button>
@@ -205,7 +224,12 @@
 
     <main>
       <section class="cover" aria-label="表紙">
-        <img src="images/cover.png" alt="アンドロイド・レクイエム 表紙" loading="eager">
+        <img src="images/cover.png" alt="ラスト・ライ 表紙" loading="eager">
+      </section>
+
+      <section class="relationship" aria-label="キャラクター相関図">
+        <h2 class="relationship-title">CHARACTER RELATIONSHIP</h2>
+        <img src="images/character_relationship.png" alt="キャラクター相関図" loading="eager">
       </section>
 
       <nav class="toc" aria-label="ページ一覧">

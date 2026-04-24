@@ -167,6 +167,7 @@ def build_reference_prompt_prefix(
     config: dict,
     reference_keys: list[str] | None = None,
     context_images: list[str] | None = None,
+    enhance_existing: bool = False,
 ) -> str:
     items = selected_reference_items(config, reference_keys)
     lines = [
@@ -178,10 +179,14 @@ def build_reference_prompt_prefix(
     lines.append("Do not swap character identities. If a reference image is not attached for this job, do not introduce that character.")
     if context_images:
         start = len(items) + 1
-        lines.append("Additional attached images after the character references are adjacent manga pages for background continuity only:")
+        lines.append("Additional attached images after the character references are visual context images:")
         for offset, path in enumerate(context_images):
             lines.append(f"{start + offset}. {path}")
-        lines.append("Use adjacent pages only to match location, debris, smoke, lighting, and mood. Do not copy their panel layout.")
+        if enhance_existing:
+            lines.append("Use the existing cover/page image as a composition and quality-improvement reference only.")
+            lines.append("Do not preserve old title text, old subtitle text, old tagline text, or old dialogue if it conflicts with the current prompt.")
+            lines.append("Replace all visible title/dialogue text with the exact current prompt text.")
+        lines.append("Use adjacent pages only to match location, debris, smoke, lighting, and mood. Do not copy their panel layout unless the prompt asks to refine the same page.")
     return "\n".join(lines)
 
 
@@ -194,6 +199,7 @@ def generate_one(
     use_references: bool,
     reference_keys: list[str] | None,
     context_images: list[str] | None,
+    enhance_existing: bool,
 ) -> None:
     prompt = read_prompt(prompt_path)
     refs = reference_paths(config, reference_keys) if use_references else []
@@ -202,7 +208,7 @@ def generate_one(
         if not path.exists():
             raise FileNotFoundError(f"Context image missing: {path}")
         refs.append(path)
-    prompt_with_refs = f"{build_reference_prompt_prefix(config, reference_keys, context_images)}\n\n{prompt}" if refs else prompt
+    prompt_with_refs = f"{build_reference_prompt_prefix(config, reference_keys, context_images, enhance_existing)}\n\n{prompt}" if refs else prompt
     payload = build_payload(config, prompt_with_refs, model_override)
     if dry_run:
         print(
@@ -267,6 +273,7 @@ def main() -> int:
     parser.add_argument("--output", help="Output file for --prompt.")
     parser.add_argument("--model", help="Override model name, for example gpt-image-1.5 if gpt-image-2 is unavailable.")
     parser.add_argument("--no-references", action="store_true", help="Do not send images/reference files to the edits endpoint.")
+    parser.add_argument("--enhance-existing", action="store_true", help="Send the current output image as a composition reference while regenerating.")
     parser.add_argument("--dry-run", action="store_true", help="Print payloads without calling the API.")
     parser.add_argument("--sleep", type=float, default=1.0, help="Seconds to wait between API calls.")
     args = parser.parse_args()
@@ -281,13 +288,14 @@ def main() -> int:
     jobs: list[tuple[Path, Path, bool, list[str] | None, list[str] | None]] = []
     use_refs = bool(config.get("use_reference_images", False)) and not args.no_references
     if args.cover:
+        cover_context = [f"{config['images_dir']}/cover.{config['output_format']}"] if args.enhance_existing else None
         jobs.append(
             (
                 ROOT / manifest["assets"]["cover_prompt"],
                 ROOT / config["images_dir"] / f"cover.{config['output_format']}",
                 use_refs,
                 manifest["assets"].get("cover_reference_keys"),
-                None,
+                cover_context,
             )
         )
 
@@ -299,13 +307,16 @@ def main() -> int:
         selected = set(parse_page_selection(args.pages))
         for page in manifest["pages"]:
             if page["page"] in selected:
+                page_context = list(page.get("context_images") or [])
+                if args.enhance_existing:
+                    page_context.insert(0, page["output_file"])
                 jobs.append(
                     (
                         ROOT / page["prompt_file"],
                         ROOT / page["output_file"],
                         use_refs,
                         page.get("reference_keys"),
-                        page.get("context_images"),
+                        page_context,
                     )
                 )
 
@@ -322,7 +333,7 @@ def main() -> int:
         if not prompt_path.exists():
             raise FileNotFoundError(prompt_path)
         print(f"[{index}/{len(jobs)}] {prompt_path.relative_to(ROOT)}")
-        generate_one(config, prompt_path, output_path, args.model, args.dry_run, job_uses_refs, reference_keys, context_images)
+        generate_one(config, prompt_path, output_path, args.model, args.dry_run, job_uses_refs, reference_keys, context_images, args.enhance_existing)
         if not args.dry_run and index < len(jobs):
             time.sleep(args.sleep)
 

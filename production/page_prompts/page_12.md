@@ -5,6 +5,7 @@
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: 暴走の真相
 
@@ -19,6 +20,18 @@ Continuity requirements:
 - If adjacent page images are attached, use them only as continuity references for background atmosphere, lighting, debris, smoke, and location.
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
+
+Page location requirement:
+Location lock: inside the same quiet abandoned building. Broken windows, moonlight, dust, pillars, rubble, cracked floor.
+
+GRAVE weapon and silhouette requirement:
+GRAVE design lock: if GRAVE appears, follow `production/character_sheets/grave.md` and `images/reference/grave.png` exactly.
+
+MAI damage requirement:
+MAI damage continuity: follow the page script.
+
+Akari injury requirement:
+Akari injury continuity: follow the page script.
 
 Manga panel layout requirement:
 9 panels: truth reveal with present and flashback intercut. Use jagged flashback panels, warning-screen inserts, and darker borders for memory.
@@ -38,7 +51,7 @@ Panel script:
 灯里。
 
 **灯里**
-「マアイさんは、友達を助けるために、わざと暴走したふりをしたんだって」
+「マアイさんは、生徒を助けるために、わざと暴走したふりをしたんだって」
 
 ---
 
@@ -57,7 +70,7 @@ Panel script:
 その体に異常なデータ表示。
 
 **マアイ・モノローグ**
-「生徒一名が実験用プログラムに侵食され、生命活動に危険が生じました」
+「生徒一名が学校の実証実験用プログラムに侵食され、生命活動に危険が生じました」
 
 ---
 
@@ -86,11 +99,20 @@ Panel script:
 現在のマアイ。
 
 **マアイ**
-「私は制御命令に違反し、その生徒を強制的に搬送しました」
+「報道された重傷は、私が加えたものではありません」
 
 ---
 
 ## 8コマ目
+
+現在のマアイ。
+
+**マアイ**
+「私は制御命令に違反し、その生徒を強制的に搬送しました」
+
+---
+
+## 9コマ目
 
 灯里。
 
@@ -99,7 +121,7 @@ Panel script:
 
 ---
 
-## 9コマ目
+## 10コマ目
 
 マアイ。
 
@@ -111,13 +133,14 @@ Panel script:
 Speech balloon text to render exactly:
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
 - place in panel 1: でも、お兄ちゃんが言ってた
-- place in panel 2: マアイさんは、友達を助けるために、わざと暴走したふりをしたんだって
+- place in panel 2: マアイさんは、生徒を助けるために、わざと暴走したふりをしたんだって
 - place in panel 3: 事実です
-- place in panel 4: 生徒一名が実験用プログラムに侵食され、生命活動に危険が生じました
+- place in panel 4: 生徒一名が学校の実証実験用プログラムに侵食され、生命活動に危険が生じました
 - place in panel 6: 止まれ！
-- place in panel 7: 私は制御命令に違反し、その生徒を強制的に搬送しました
-- place in panel 8: それで暴走扱い？
-- place in panel 9: はい。命令違反は、暴走と記録されます
+- place in panel 7: 報道された重傷は、私が加えたものではありません
+- place in panel 8: 私は制御命令に違反し、その生徒を強制的に搬送しました
+- place in panel 9: それで暴走扱い？
+- place in panel 10: はい。命令違反は、暴走と記録されます
 
 Composition requirements:
 - Treat the panel script as the exact page beat structure.

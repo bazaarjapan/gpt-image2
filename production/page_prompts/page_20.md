@@ -5,6 +5,7 @@
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: 約束
 
@@ -20,16 +21,30 @@ Continuity requirements:
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
 
+Page location requirement:
+Location lock: same abandoned building after GRAVE attack. Collapsing walls, smoke, rubble, firelight, torn rebar, ruined concrete.
+
+GRAVE weapon and silhouette requirement:
+GRAVE design lock: if GRAVE appears, follow `production/character_sheets/grave.md` and `images/reference/grave.png` exactly.
+
+MAI damage requirement:
+MAI damage continuity: MAI has already lost her anatomical left arm in P19. Throughout this page, draw MAI battered and missing her left arm, with a broken left shoulder/upper-arm stump, exposed mechanical parts, and sparks. Keep MAI's right arm intact and usable. Do not restore the missing left arm and do not swap the damaged side. Left/right are from MAI's own body: if MAI faces the reader, the missing left arm appears on the reader's right; if MAI is seen from behind, the missing left arm appears on the reader's left. Akari, if present, has both arms intact; do not amputate or damage Akari's arms.
+
+Akari injury requirement:
+Akari injury continuity: Akari has both arms intact throughout this page. Her injury is only her leg/foot, so show limping, crawling, or being unable to stand, but never remove, blacken, or mechanize either of Akari's arms.
+
 Manga panel layout requirement:
 9 panels: emotional climax. Build from small close-up panels to a large final panel of MAI making a micro-expression. Do not make MAI smile broadly. Final panel should dominate the bottom third.
 
 Panel script:
 ## 1コマ目
 
-マアイが灯里を瓦礫の外へ押し出す。
+左腕を失ったマアイが、灯里を瓦礫の外へ押し出す。
+灯里は足を引きずりながらも、外へ出られる。
+灯里の両腕は無事。怪我は足だけで、腕を欠損させない。
 
 **マアイ**
-「私は敵の弱点を知っています。だから逃げてください」
+「私は、あれを止める方法を知っています。だから逃げてください」
 
 ---
 
@@ -106,7 +121,7 @@ Panel script:
 
 Speech balloon text to render exactly:
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
-- place in panel 1: 私は敵の弱点を知っています。だから逃げてください
+- place in panel 1: 私は、あれを止める方法を知っています。だから逃げてください
 - place in panel 2: ほんと？
 - place in panel 3: はい
 - place in panel 4: じゃあ、約束して

@@ -5,12 +5,13 @@
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: 戻ってきた理由
 
 Character reference requirements:
 - The attached reference images are the canonical character design sheets.
-- This page uses only these character references: MAI / マアイ, 朝倉 灯里.
+- This page uses only these character references: MAI / マアイ, 朝倉 灯里, GRAVE / グレイヴ.
 - Match each named character to their own attached reference image exactly.
 - Never swap character identities. Do not give Akari's face or clothes to MAI, do not give MAI's android seams to Akari, and do not mix GRAVE armor with any human character.
 - Do not redesign faces, hairstyles, outfits, body proportions, or GRAVE's armor silhouette.
@@ -20,14 +21,26 @@ Continuity requirements:
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
 
+Page location requirement:
+Location lock: same abandoned building after GRAVE attack. Collapsing walls, smoke, rubble, firelight, torn rebar, ruined concrete.
+
+GRAVE weapon and silhouette requirement:
+GRAVE design lock for P19: Use `production/character_sheets/grave.md` and `images/reference/grave.png` exactly. GRAVE is a huge black armored SEC-860G with a red mono-eye visor, broad angular shoulder armor, heavy industrial legs, and a right forearm integrated cannon. The weapon must be part of the right forearm armor, not held in a hand. It has four slim parallel barrels at the wrist end, like the reference sheet's forearm cannon. Do not draw a separate gun, do not draw a round rotary minigun, do not draw a huge handheld gatling, do not add a sword, and do not replace the cannon with a normal hand. In the rescue panel, MAI grips the armored right forearm/cannon housing, forcing the four-barrel muzzle away from Akari.
+
+MAI damage requirement:
+MAI damage continuity: In this page MAI returns and grabs GRAVE's right forearm cannon, forcing the shot away from Akari. The bullet hits MAI and destroys/blows off MAI's left arm. From the impact panel onward, MAI must be visibly battered, missing her anatomical left arm from the shoulder or upper arm, with sparks and broken mechanical parts. Left/right are from MAI's own body, not from the viewer's perspective. Do not remove her right arm. Akari is not an android and has not lost any arm: keep both of Akari's arms intact; only Akari's leg/foot is injured.
+
+Akari injury requirement:
+Akari injury continuity: Akari has both arms intact throughout this page. Her injury is only her leg/foot, so show limping, crawling, or being unable to stand, but never remove, blacken, or mechanize either of Akari's arms.
+
 Manga panel layout requirement:
-10 panels: silence and hesitation inside the same collapsed ruin as pages 18 and 20. The background must continue directly from the adjacent pages: shattered concrete, rubble piles, smoke, broken walls, dust, torn rebar, and distant ruined buildings. No park, no trees, no clean road, no peaceful walkway. Use tiny footstep panels, a memory panel floating in smoky white space, and a large turn-back panel.
+12 panels: immediate attack and rescue sequence inside the same collapsed ruin as pages 18 and 20. Use a clear visual chain: Akari trapped, GRAVE targeting her with the right forearm cannon, MAI lunging in, MAI grabbing the cannon armor, muzzle forced aside, shot missing Akari, impact destroying MAI's left arm, then quiet emotional close-ups. Avoid confusing silhouettes and avoid any flashback-like memory panel.
 
 Panel script:
 ## 1コマ目
 
-マアイが背を向ける。
-灯里の表情が凍る。
+灯里が瓦礫の中に一人残される。
+足を押さえて動けない。
 
 ---
 
@@ -36,84 +49,113 @@ Panel script:
 灯里。
 
 **灯里**
-「……マアイさん？」
+「……嘘、でしょ」
 
 ---
 
 ## 3コマ目
 
-マアイの足元。
-一歩進む。
+グレイヴの赤い単眼が灯里を捕捉する。
+瓦礫の向こうから迫る巨大な影。
 
 ---
 
 ## 4コマ目
 
-マアイの足が止まる。
+グレイヴの腕部武装が灯里へ向く。
+腕部武装は右前腕と一体化した四連装キャノン。手持ち銃や巨大な丸いガトリングではない。
+灯里は逃げられない。
 
 ---
 
 ## 5コマ目
 
-回想。
-灯里の言葉。
-
-**灯里・回想**
-「人間は、正確な言葉だけじゃ生きていけないの」
+現在。
+銃口が灯里へ向く。
+右前腕の四本の細い砲身が灯里を狙う。
 
 ---
 
 ## 6コマ目
 
-現在。
-マアイが振り返る。
+発射の瞬間、マアイが戻ってきてグレイヴの右腕の銃にしがみつく。
+マアイはグレイヴの右前腕一体型キャノンの装甲部分をつかみ、砲身を横へそらす。
+銃口がそれ、弾丸が灯里から外れる。
+
+**灯里**
+「マアイさん！」
 
 ---
 
 ## 7コマ目
 
-マアイが灯里の元へ戻る。
+銃弾がマアイに当たる。
+マアイの左腕が吹き飛ぶ。
+火花と破片。
 
-**灯里**
-「何で戻ってきたの？」
+**マアイ**
+「私の方が重症のようですね」
 
 ---
 
 ## 8コマ目
 
+灯里、涙を浮かべる。
+
+**灯里**
+「合理的な判断をするあなたが、なんで戻ってきたの？」
+
+---
+
+## 9コマ目
+
 マアイ。
+左腕を失い、損傷したまま立っている。
 
 **マアイ**
 「未成年者保護プロトコルに基づく行動です」
 
 ---
 
-## 9コマ目
+## 10コマ目
 
-灯里、涙を浮かべる。
+灯里。
 
 **灯里**
 「……それ、本当？」
 
 ---
 
-## 10コマ目
+## 11コマ目
 
 マアイ、少し間。
+壊れた左肩から火花が散る。
 
 **マアイ**
-「はい」
+「回答が困難です」
+
+---
+
+## 12コマ目
+
+マアイが灯里を見る。
+左腕を失った体で、静かに言う。
+
+**マアイ**
+「逃げてください」
 
 ---
 
 Speech balloon text to render exactly:
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
-- place in panel 2: ……マアイさん？
-- place in panel 5: 人間は、正確な言葉だけじゃ生きていけないの
-- place in panel 7: 何で戻ってきたの？
-- place in panel 8: 未成年者保護プロトコルに基づく行動です
-- place in panel 9: ……それ、本当？
-- place in panel 10: はい
+- place in panel 2: ……嘘、でしょ
+- place in panel 6: マアイさん！
+- place in panel 7: 私の方が重症のようですね
+- place in panel 8: 合理的な判断をするあなたが、なんで戻ってきたの？
+- place in panel 9: 未成年者保護プロトコルに基づく行動です
+- place in panel 10: ……それ、本当？
+- place in panel 11: 回答が困難です
+- place in panel 12: 逃げてください
 
 Composition requirements:
 - Treat the panel script as the exact page beat structure.

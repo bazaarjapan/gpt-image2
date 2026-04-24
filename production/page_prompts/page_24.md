@@ -5,6 +5,7 @@
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: 誰よりも人間らしかった
 
@@ -20,6 +21,18 @@ Continuity requirements:
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
 
+Page location requirement:
+Location lock: school after time has passed. Classroom, hallway, large monitor, desk, ordinary daylight with lingering sadness.
+
+GRAVE weapon and silhouette requirement:
+GRAVE design lock: if GRAVE appears, follow `production/character_sheets/grave.md` and `images/reference/grave.png` exactly.
+
+MAI damage requirement:
+MAI damage continuity: follow the page script.
+
+Akari injury requirement:
+Akari injury continuity: follow the page script.
+
 Manga panel layout requirement:
 7 panels: quiet epilogue. Use airy school panels, object close-up of metal fragment, ghostlike MAI silhouette, and a final large quiet profile panel with strong empty space.
 
@@ -30,7 +43,7 @@ Panel script:
 学校の教室。大型モニターにCM。
 
 **CM音声**
-「新型教育用アンドロイドEDU-860G、コードネームECHO」
+「マアイ事件を受け、新型教育用アンドロイドEDU-860G、コードネームECHOを導入」
 
 ---
 
@@ -119,7 +132,7 @@ Panel script:
 
 Speech balloon text to render exactly:
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
-- place in panel 1: 新型教育用アンドロイドEDU-860G、コードネームECHO
+- place in panel 1: マアイ事件を受け、新型教育用アンドロイドEDU-860G、コードネームECHOを導入
 - place in panel 2: 感情機能を搭載
 - place in panel 3: 感情を持ったアンドロイドに、心は宿るのだろうか
 - place in panel 4: 私はまだ、その答えを知らない

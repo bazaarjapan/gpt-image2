@@ -8,7 +8,7 @@
 
 ## Image Prompt
 
-Japanese manga mecha character design sheet, front view, side view, back view, full body, same character consistency. Large black armored anti-android suppression unit, model SEC-860G, called GRAVE. Heavy industrial limbs, inhuman face, red mono-eye or thin red visor, built-in weapon arms, intimidating silhouette, no malice, only command-driven. Black-and-white manga line art with sharp shadows and mechanical detail. No speech bubbles, no text, no logo, no watermark.
+Japanese manga mecha character design sheet, front view, side view, back view, full body, same character consistency. Large black armored anti-android suppression unit, model SEC-860G, called GRAVE. Heavy industrial limbs, inhuman face, red mono-eye or thin red visor, right forearm is an integrated multi-barrel cannon exactly like the reference sheet, left arm is a heavy armored manipulator hand, intimidating silhouette, no malice, only command-driven. Black-and-white manga line art with sharp shadows and mechanical detail. No speech bubbles, no text, no logo, no watermark.
 
 Shared style:
 # 作画共通仕様

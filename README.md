@@ -1,4 +1,4 @@
-# アンドロイド・レクイエム 漫画生成プロジェクト
+# ラスト・ライ 漫画生成プロジェクト
 
 `ストーリー.md`と`漫画制作仕様書.md`をもとに、OpenAI Images APIの`gpt-image-2`で表紙と24ページ漫画を生成するためのプロジェクトです。
 
@@ -7,10 +7,12 @@
 ## 現在の成果物
 
 - 表紙: `images/cover.png`
+- キャラクター相関図: `images/character_relationship.png`
 - 本文24ページ: `images/pages/page_01.png`から`images/pages/page_24.png`
 - キャラクター参照画像: `images/reference/*.png`
 - 漫画ビューア: `index.html`
 - ページ生成プロンプト: `production/page_prompts/*.md`
+- 相関図生成プロンプト: `production/relationship_prompt.md`
 - キャラクター設定資料: `production/character_sheets/*.md`
 
 ## 表示方法
@@ -180,4 +182,3 @@ python scripts/generate_images.py --pages 11-24 --sleep 2
 - `images/pages`の画像を再生成すると既存ページは上書きされます。
 - `gpt-image-2`による日本語文字は生成品質に揺れがあります。誤字が目立つページは、そのページだけ再生成してください。
 - キャラが混同されたページは、該当ページの`production/page_prompts/page_XX.md`と`reference_keys`を確認してから再生成してください。
-

@@ -62,7 +62,8 @@ Placement notes are not drawable text. Render only the Japanese dialogue strings
 - place in panel 3: いいから逃げろって言ってるんだよ！
 - place in panel 4: マアイさん、こっち！
 - place in panel 5: こっちだ、鉄くず野郎！
-- place in panel 6: 妨害対象を確認
+- place in panel 6: マアイは暴走じゃない！　人を助けたんだ！
+- place in panel 7: 妨害対象を確認
 
 ## P08 逃走
 
@@ -108,13 +109,14 @@ Placement notes are not drawable text. Render only the Japanese dialogue strings
 
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
 - place in panel 1: でも、お兄ちゃんが言ってた
-- place in panel 2: マアイさんは、友達を助けるために、わざと暴走したふりをしたんだって
+- place in panel 2: マアイさんは、生徒を助けるために、わざと暴走したふりをしたんだって
 - place in panel 3: 事実です
-- place in panel 4: 生徒一名が実験用プログラムに侵食され、生命活動に危険が生じました
+- place in panel 4: 生徒一名が学校の実証実験用プログラムに侵食され、生命活動に危険が生じました
 - place in panel 6: 止まれ！
-- place in panel 7: 私は制御命令に違反し、その生徒を強制的に搬送しました
-- place in panel 8: それで暴走扱い？
-- place in panel 9: はい。命令違反は、暴走と記録されます
+- place in panel 7: 報道された重傷は、私が加えたものではありません
+- place in panel 8: 私は制御命令に違反し、その生徒を強制的に搬送しました
+- place in panel 9: それで暴走扱い？
+- place in panel 10: はい。命令違反は、暴走と記録されます
 
 ## P13 命令だから？
 
@@ -129,7 +131,7 @@ Placement notes are not drawable text. Render only the Japanese dialogue strings
 - place in panel 8: 教育用アンドロイドには、未成年者保護プロトコルが搭載されています
 - place in panel 9: そっか。命令なんだ
 
-## P14 嘘の授業
+## P14 嘘の練習
 
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
 - place in panel 1: じゃあさ、お兄ちゃんの印象は？
@@ -182,26 +184,29 @@ Placement notes are not drawable text. Render only the Japanese dialogue strings
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
 - place in panel 2: こほっ……こほっ……
 - place in panel 3: 逃げましょう
-- place in panel 4: マアイさんだけでも逃げて
+- place in panel 4: 足が……動かない
 - place in panel 5: あなたを置いて逃げることは、未成年者保護プロトコルに反します
-- place in panel 6: このままじゃ、二人とも死んじゃう
+- place in panel 6: このままじゃ、二人とも壊されちゃう
 - place in panel 7: それは合理的な判断です
-- place in panel 8: 私だけ逃げます
+- place in panel 8: 負傷者を残し、稼働可能な機体が離脱することは、合理的な判断です
+- place in panel 9: ……マアイさん？
 
 ## P19 戻ってきた理由
 
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
-- place in panel 2: ……マアイさん？
-- place in panel 5: 人間は、正確な言葉だけじゃ生きていけないの
-- place in panel 7: 何で戻ってきたの？
-- place in panel 8: 未成年者保護プロトコルに基づく行動です
-- place in panel 9: ……それ、本当？
-- place in panel 10: はい
+- place in panel 2: ……嘘、でしょ
+- place in panel 6: マアイさん！
+- place in panel 7: 私の方が重症のようですね
+- place in panel 8: 合理的な判断をするあなたが、なんで戻ってきたの？
+- place in panel 9: 未成年者保護プロトコルに基づく行動です
+- place in panel 10: ……それ、本当？
+- place in panel 11: 回答が困難です
+- place in panel 12: 逃げてください
 
 ## P20 約束
 
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
-- place in panel 1: 私は敵の弱点を知っています。だから逃げてください
+- place in panel 1: 私は、あれを止める方法を知っています。だから逃げてください
 - place in panel 2: ほんと？
 - place in panel 3: はい
 - place in panel 4: じゃあ、約束して
@@ -248,7 +253,7 @@ Placement notes are not drawable text. Render only the Japanese dialogue strings
 ## P24 誰よりも人間らしかった
 
 Placement notes are not drawable text. Render only the Japanese dialogue strings below.
-- place in panel 1: 新型教育用アンドロイドEDU-860G、コードネームECHO
+- place in panel 1: マアイ事件を受け、新型教育用アンドロイドEDU-860G、コードネームECHOを導入
 - place in panel 2: 感情機能を搭載
 - place in panel 3: 感情を持ったアンドロイドに、心は宿るのだろうか
 - place in panel 4: 私はまだ、その答えを知らない

@@ -5,6 +5,7 @@
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: 逃げろ
 
@@ -19,6 +20,18 @@ Continuity requirements:
 - If adjacent page images are attached, use them only as continuity references for background atmosphere, lighting, debris, smoke, and location.
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
+
+Page location requirement:
+Location lock: inside Asakura house, moving from Toya's bedroom to hallway and broken entrance. Toya diverts GRAVE inside the house while Akari takes MAI away. Do not show night road or ruins yet.
+
+GRAVE weapon and silhouette requirement:
+GRAVE design lock: if GRAVE appears, follow `production/character_sheets/grave.md` and `images/reference/grave.png` exactly.
+
+MAI damage requirement:
+MAI damage continuity: follow the page script.
+
+Akari injury requirement:
+Akari injury continuity: follow the page script.
 
 Manga panel layout requirement:
 6 panels: action diversion. Use a large diagonal split between Toya drawing GRAVE away and Akari pulling MAI. Make GRAVE's red eye a sharp tracking insert.
@@ -71,6 +84,15 @@ Panel script:
 
 ## 6コマ目
 
+透也、走りながら灯里へ叫ぶ。
+
+**透也**
+「マアイは暴走じゃない！　人を助けたんだ！」
+
+---
+
+## 7コマ目
+
 グレイヴの単眼が透也を捕捉。
 
 **グレイヴ**
@@ -85,7 +107,8 @@ Placement notes are not drawable text. Render only the Japanese dialogue strings
 - place in panel 3: いいから逃げろって言ってるんだよ！
 - place in panel 4: マアイさん、こっち！
 - place in panel 5: こっちだ、鉄くず野郎！
-- place in panel 6: 妨害対象を確認
+- place in panel 6: マアイは暴走じゃない！　人を助けたんだ！
+- place in panel 7: 妨害対象を確認
 
 Composition requirements:
 - Treat the panel script as the exact page beat structure.

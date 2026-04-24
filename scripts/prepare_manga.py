@@ -39,6 +39,42 @@ STYLE_BIBLE = """\
 - 禁止: photorealistic, 3D render, western superhero style, excessive gore, messy unreadable panels, random unrelated text, watermark, signature.
 """
 
+LOCATION_BIBLE = """\
+# 背景・ロケーション設計
+
+## P02-P05: 透也の部屋
+
+舞台は朝倉家の2階にある透也の個室。狭い高校生男子の部屋。床に工具、スマホ、脱ぎっぱなしの服、勉強机、ベッド、本棚、充電ケーブル、古いゲーム機などがある。窓の外は夜。マアイはこの部屋に匿われている。P02、P03、P04、P05は基本的に同じ部屋の中で進行する。P04では部屋のドアと廊下側を使うが、背景は透也の部屋から連続している。P05のチャイム時も、まだ透也の部屋の中で灯里とマアイが小声で会話している。
+
+## P06: 朝倉家の玄関破壊
+
+同じ家の玄関側でGRAVEが侵入する。爆発は玄関ドアと廊下を吹き飛ばし、透也の部屋や階段側にも煙と破片が流れ込む。背景は急に屋外や廃墟にならない。住宅の玄関、廊下、階段、破壊されたドア、割れた壁、舞い込む煙で見せる。
+
+## P07: 家の中から外へ逃げる動線
+
+P07は朝倉家の室内アクション。透也が部屋または廊下で灯里の前に出て、灯里がマアイの手を取り、透也は玄関・廊下側へGRAVEを引きつける。背景は透也の部屋、廊下、階段、破壊された玄関が連続して見える。まだ夜道や廃墟には行かない。
+
+## P08: 夜道から廃墟へ
+
+P08で初めて家の外へ出る。夜の住宅街、遠くの爆発光、小型ドローンの赤いライト、逃走する灯里とマアイ。最後に廃墟の入口へ入る。
+
+## P09-P16: 廃墟内部
+
+古い廃ビルまたは廃校の内部。壊れた窓、月明かり、瓦礫、柱、割れた床、埃。静かな会話劇の舞台。P09-P16は同じ廃墟内で、場所を少し移動しても背景トーンは統一する。
+
+## P17-P22: 崩壊する廃墟
+
+GRAVE再襲撃後の同じ廃墟。壁が吹き飛び、煙、瓦礫、炎、壊れた鉄骨、崩れた床が増える。P18-P22は同じ崩壊現場の連続。P19だけ明るい公園や街路樹にしてはいけない。
+
+## P23: 病院
+
+事件後の病院廊下。白い壁、長椅子、夜明けまたは曇った外光。静かな余韻。透也は包帯姿。
+
+## P24: 学校
+
+時間経過後の学校。教室、大型モニター、廊下、机の上の金属片。清潔で日常に戻った空気。ただしマアイの不在の余韻を残す。
+"""
+
 
 CHARACTER_BIBLE = """\
 # キャラクター固定設定
@@ -57,7 +93,7 @@ CHARACTER_BIBLE = """\
 
 ## GRAVE / グレイヴ
 
-正式型番 SEC-860G。黒い大型装甲の攻撃型アンドロイド。赤い単眼または細い赤い発光ライン。顔は人間的にしない。重機のような太い手足と内蔵式武装。悪意ではなく命令だけで動く怖さを出す。
+正式型番 SEC-860G。黒い大型装甲の攻撃型アンドロイド。赤い単眼または細い赤い発光ライン。顔は人間的にしない。重機のような太い手足と内蔵式武装。右前腕は設定資料通りの内蔵式多銃身砲、左腕は重装甲のマニピュレーター。悪意ではなく命令だけで動く怖さを出す。
 
 ## ECHO / エコー
 
@@ -92,7 +128,8 @@ CHARACTER_SHEET_PROMPTS = {
         "GRAVE / グレイヴ",
         "Japanese manga mecha character design sheet, front view, side view, back view, full body, same character consistency. "
         "Large black armored anti-android suppression unit, model SEC-860G, called GRAVE. Heavy industrial limbs, "
-        "inhuman face, red mono-eye or thin red visor, built-in weapon arms, intimidating silhouette, no malice, only command-driven. "
+        "inhuman face, red mono-eye or thin red visor, right forearm is an integrated multi-barrel cannon exactly like the reference sheet, "
+        "left arm is a heavy armored manipulator hand, intimidating silhouette, no malice, only command-driven. "
         "Black-and-white manga line art with sharp shadows and mechanical detail. No speech bubbles, no text, no logo, no watermark.",
     ),
     "echo": (
@@ -106,7 +143,7 @@ CHARACTER_SHEET_PROMPTS = {
 
 
 COVER_PROMPT = """\
-Japanese black-and-white all-ages manga cover illustration for "Android Requiem: MAI's Last Lesson", using the attached character reference images as strict visual canon.
+Japanese black-and-white all-ages theatrical manga cover illustration for "Last Lie: MAI", using the attached character reference images as strict visual canon.
 
 Match the reference images exactly: MAI's face, bob hair, ring eyes, android seams and outfit; Akari's face, hair and casual outfit; Toya if included; GRAVE's black armored silhouette and red mono-eye. Do not redesign any character.
 
@@ -115,9 +152,9 @@ Central composition: MAI stands calmly with a cracked metal security tag in one 
 Cover layout: bold Japanese manga cover composition, not a flat character lineup. Use a huge dark GRAVE silhouette as the background mass, MAI as the calm vertical center line, Akari as the emotional foreground diagonal, strong black-and-white contrast, dramatic rim light, storm-like screentone texture, and clear depth. Keep all three characters visually distinct and exactly matched to their own reference sheets.
 
 Render the following cover text clearly in Japanese:
-Title: アンドロイド・レクイエム
-Subtitle: MAIの最後の授業
-Tagline: その嘘は、誰よりも人間らしかった。
+Title: ラスト・ライ
+Subtitle: MAI
+Tagline: その嘘は、世界でいちばん優しかった。
 
 Do not add any other text, logo, watermark, or signature.
 """
@@ -134,6 +171,7 @@ CHECKLIST = """\
 - P15、P16、P20、P22、P24は品質確認を厳しくする。
 - 同じページを作り直す場合は、構図指示を変えすぎず、表情・密度・視線だけを調整する。
 - API生成時はまず表紙またはP1だけで参照画像の効き方を確認する。
+- P02-P07は透也の部屋と朝倉家の玄関・廊下の連続空間として描く。途中で屋外、公園、廃墟、学校にしない。
 """
 
 
@@ -237,7 +275,7 @@ def page_layout_instruction(page: Page, panel_count: int) -> str:
         16: "12 panels: delicate conversation rhythm. Use many small quiet reaction panels, a silent beat, and a close-up of MAI's eyes for the unclassified reaction. Let the page breathe despite many panels.",
         17: "6 panels: drone detection tension, then a huge wall-destruction impact panel that breaks panel borders. Use debris, black speed lines, and tilted frames.",
         18: "8 panels: collapsing ruin action. Use diagonal falling rubble panels, smoke-obscured close-ups, and a tall panel of MAI supporting Akari.",
-        19: "10 panels: silence and hesitation inside the same collapsed ruin as pages 18 and 20. The background must continue directly from the adjacent pages: shattered concrete, rubble piles, smoke, broken walls, dust, torn rebar, and distant ruined buildings. No park, no trees, no clean road, no peaceful walkway. Use tiny footstep panels, a memory panel floating in smoky white space, and a large turn-back panel.",
+        19: "12 panels: immediate attack and rescue sequence inside the same collapsed ruin as pages 18 and 20. Use a clear visual chain: Akari trapped, GRAVE targeting her with the right forearm cannon, MAI lunging in, MAI grabbing the cannon armor, muzzle forced aside, shot missing Akari, impact destroying MAI's left arm, then quiet emotional close-ups. Avoid confusing silhouettes and avoid any flashback-like memory panel.",
         20: "9 panels: emotional climax. Build from small close-up panels to a large final panel of MAI making a micro-expression. Do not make MAI smile broadly. Final panel should dominate the bottom third.",
         21: "8 panels: duel setup. Use Akari fleeing in a narrow foreground strip, then a massive confrontation panel with MAI small against GRAVE. Strong scale contrast.",
         22: "9 panels: sacrifice sequence. Tight core close-ups, calm face close-up, then a large white flash panel. The final flash should dominate the page and swallow panel borders.",
@@ -251,6 +289,107 @@ def page_layout_instruction(page: Page, panel_count: int) -> str:
     if panel_count <= 7:
         return f"{panel_count} panels in a varied Japanese manga layout: one large anchor panel, two medium panels, several narrow timing panels, and dynamic asymmetry. Avoid equal grid."
     return f"{panel_count} panels in a dense but readable Japanese manga layout: combine vertical narrow panels, close-ups, border-breaking action or emotion, and one larger emotional beat. Avoid equal grid."
+
+
+def grave_design_instruction_for_page(page: Page) -> str:
+    if page.number == 19:
+        return (
+            "GRAVE design lock for P19: Use `production/character_sheets/grave.md` and `images/reference/grave.png` exactly. "
+            "GRAVE is a huge black armored SEC-860G with a red mono-eye visor, broad angular shoulder armor, heavy industrial legs, "
+            "and a right forearm integrated cannon. The weapon must be part of the right forearm armor, not held in a hand. "
+            "It has four slim parallel barrels at the wrist end, like the reference sheet's forearm cannon. "
+            "Do not draw a separate gun, do not draw a round rotary minigun, do not draw a huge handheld gatling, do not add a sword, "
+            "and do not replace the cannon with a normal hand. In the rescue panel, MAI grips the armored right forearm/cannon housing, "
+            "forcing the four-barrel muzzle away from Akari."
+        )
+    if page.number == 21:
+        return (
+            "GRAVE design lock: Use `production/character_sheets/grave.md` and `images/reference/grave.png` exactly. "
+            "GRAVE is a huge black armored SEC-860G with a red mono-eye visor, broad angular shoulder armor, heavy industrial legs, "
+            "and a right forearm integrated multi-barrel cannon/gun. The final action panel must clearly show the right forearm as a gun, "
+            "not a normal hand, not a sword, not an empty arm, not a human-like arm. Keep the left arm as a heavy manipulator hand."
+        )
+    return "GRAVE design lock: if GRAVE appears, follow `production/character_sheets/grave.md` and `images/reference/grave.png` exactly."
+
+
+def mai_damage_instruction_for_page(page: Page) -> str:
+    if page.number == 19:
+        return (
+            "MAI damage continuity: In this page MAI returns and grabs GRAVE's right forearm cannon, forcing the shot away from Akari. "
+            "The bullet hits MAI and destroys/blows off MAI's left arm. From the impact panel onward, MAI must be visibly battered, "
+            "missing her anatomical left arm from the shoulder or upper arm, with sparks and broken mechanical parts. "
+            "Left/right are from MAI's own body, not from the viewer's perspective. Do not remove her right arm. "
+            "Akari is not an android and has not lost any arm: keep both of Akari's arms intact; only Akari's leg/foot is injured."
+        )
+    if page.number in {20, 21, 22}:
+        base = (
+            "MAI damage continuity: MAI has already lost her anatomical left arm in P19. Throughout this page, draw MAI battered and missing her left arm, "
+            "with a broken left shoulder/upper-arm stump, exposed mechanical parts, and sparks. Keep MAI's right arm intact and usable. "
+            "Do not restore the missing left arm and do not swap the damaged side. Left/right are from MAI's own body: if MAI faces the reader, "
+            "the missing left arm appears on the reader's right; if MAI is seen from behind, the missing left arm appears on the reader's left. "
+            "Akari, if present, has both arms intact; do not amputate or damage Akari's arms."
+        )
+        if page.number == 21:
+            return (
+                base
+                + " P21 panel 2 specific lock: MAI is standing before GRAVE and is often seen from behind; in that back-view composition, "
+                "the missing arm must appear on the image/viewer's left side, while MAI's intact right arm appears on the image/viewer's right side. "
+                "Do not put the broken shoulder on the image/viewer's right in panel 2."
+            )
+        if page.number == 22:
+            return (
+                base
+                + " P22 panel 1 specific lock: MAI uses only her intact right arm to open/remove her jacket and expose the chest control core; "
+                "the left shoulder remains a broken stump with no left forearm or left hand."
+            )
+        return base
+    return "MAI damage continuity: follow the page script."
+
+
+def akari_injury_instruction_for_page(page: Page) -> str:
+    if page.number == 18:
+        return (
+            "Akari injury continuity: Akari's injured foot/leg is trapped by rubble, but she is wearing white or light-colored socks. "
+            "Do not draw the injured foot as bare skin, a black sock, black boot, black prosthetic, or mechanical leg. "
+            "Akari's arms are intact. MAI still has both arms on P18; MAI's left arm is not lost until P19."
+        )
+    if page.number in {19, 20, 21}:
+        return (
+            "Akari injury continuity: Akari has both arms intact throughout this page. Her injury is only her leg/foot, "
+            "so show limping, crawling, or being unable to stand, but never remove, blacken, or mechanize either of Akari's arms."
+        )
+    return "Akari injury continuity: follow the page script."
+
+
+def location_instruction_for_page(page: Page) -> str:
+    if 2 <= page.number <= 5:
+        return (
+            "Location lock: Toya's small second-floor bedroom at night. Keep the same bedroom continuity across P02-P05: "
+            "desk, bed, bookshelf, smartphone, tools on the floor, door to hallway, cramped teenage room. "
+            "Do not show outdoor streets, ruins, school corridors, hospital, or parks."
+        )
+    if page.number == 6:
+        return (
+            "Location lock: Asakura house entrance and hallway being destroyed by GRAVE. This is the same house as P02-P05, "
+            "not a battlefield or ruined city. Show broken front door, hallway, stairs, smoke entering the home, splintered walls, "
+            "and debris from the entrance explosion."
+        )
+    if page.number == 7:
+        return (
+            "Location lock: inside Asakura house, moving from Toya's bedroom to hallway and broken entrance. "
+            "Toya diverts GRAVE inside the house while Akari takes MAI away. Do not show night road or ruins yet."
+        )
+    if page.number == 8:
+        return "Location lock: outside at night, residential street escape, then entrance to an abandoned building at the end."
+    if 9 <= page.number <= 16:
+        return "Location lock: inside the same quiet abandoned building. Broken windows, moonlight, dust, pillars, rubble, cracked floor."
+    if 17 <= page.number <= 22:
+        return "Location lock: same abandoned building after GRAVE attack. Collapsing walls, smoke, rubble, firelight, torn rebar, ruined concrete."
+    if page.number == 23:
+        return "Location lock: hospital corridor after the incident. White walls, bench, quiet recovery atmosphere."
+    if page.number == 24:
+        return "Location lock: school after time has passed. Classroom, hallway, large monitor, desk, ordinary daylight with lingering sadness."
+    return "Location lock: follow the page script and keep continuity with adjacent pages."
 
 
 def reference_keys_for_page(page: Page) -> list[str]:
@@ -273,7 +412,7 @@ def reference_keys_for_page(page: Page) -> list[str]:
         16: ["mai", "akari"],
         17: ["mai", "akari", "grave"],
         18: ["mai", "akari", "grave"],
-        19: ["mai", "akari"],
+        19: ["mai", "akari", "grave"],
         20: ["mai", "akari"],
         21: ["mai", "akari", "grave"],
         22: ["mai", "grave"],
@@ -284,12 +423,15 @@ def reference_keys_for_page(page: Page) -> list[str]:
 
 
 def context_images_for_page(page: Page, output_format: str) -> list[str]:
-    if page.number == 19:
-        return [
-            f"images/pages/page_18.{output_format}",
-            f"images/pages/page_20.{output_format}",
-        ]
-    return []
+    if page.number < 1 or page.number > 24:
+        return []
+
+    context = []
+    if page.number > 1:
+        context.append(f"images/pages/page_{page.number - 1:02d}.{output_format}")
+    if page.number < 24:
+        context.append(f"images/pages/page_{page.number + 1:02d}.{output_format}")
+    return context
 
 
 def character_names_for_keys(keys: list[str]) -> str:
@@ -317,6 +459,7 @@ def build_page_prompt(page: Page) -> str:
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: {page.title}
 
@@ -331,6 +474,18 @@ Continuity requirements:
 - If adjacent page images are attached, use them only as continuity references for background atmosphere, lighting, debris, smoke, and location.
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
+
+Page location requirement:
+{location_instruction_for_page(page)}
+
+GRAVE weapon and silhouette requirement:
+{grave_design_instruction_for_page(page)}
+
+MAI damage requirement:
+{mai_damage_instruction_for_page(page)}
+
+Akari injury requirement:
+{akari_injury_instruction_for_page(page)}
 
 Manga panel layout requirement:
 {page_layout_instruction(page, len(panels))}
@@ -407,6 +562,7 @@ def main() -> None:
     pages = parse_pages(story_text)
 
     write_file(production_dir / "style_bible.md", STYLE_BIBLE)
+    write_file(production_dir / "location_bible.md", LOCATION_BIBLE)
     character_sheet_dir = production_dir / "character_sheets"
     character_sheet_index = ["# キャラクター三面図・固定用プロンプト"]
     character_jobs = []
@@ -471,6 +627,7 @@ def main() -> None:
         },
         "assets": {
             "style_bible": "production/style_bible.md",
+            "location_bible": "production/location_bible.md",
             "character_prompts": "production/character_prompts.md",
             "cover_prompt": "production/cover_prompt.md",
             "cover_reference_keys": ["mai", "akari", "grave"],

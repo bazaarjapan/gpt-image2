@@ -5,6 +5,7 @@
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: これは、私の答えです
 
@@ -20,14 +21,27 @@ Continuity requirements:
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
 
+Page location requirement:
+Location lock: same abandoned building after GRAVE attack. Collapsing walls, smoke, rubble, firelight, torn rebar, ruined concrete.
+
+GRAVE weapon and silhouette requirement:
+GRAVE design lock: if GRAVE appears, follow `production/character_sheets/grave.md` and `images/reference/grave.png` exactly.
+
+MAI damage requirement:
+MAI damage continuity: MAI has already lost her anatomical left arm in P19. Throughout this page, draw MAI battered and missing her left arm, with a broken left shoulder/upper-arm stump, exposed mechanical parts, and sparks. Keep MAI's right arm intact and usable. Do not restore the missing left arm and do not swap the damaged side. Left/right are from MAI's own body: if MAI faces the reader, the missing left arm appears on the reader's right; if MAI is seen from behind, the missing left arm appears on the reader's left. Akari, if present, has both arms intact; do not amputate or damage Akari's arms. P22 panel 1 specific lock: MAI uses only her intact right arm to open/remove her jacket and expose the chest control core; the left shoulder remains a broken stump with no left forearm or left hand.
+
+Akari injury requirement:
+Akari injury continuity: follow the page script.
+
 Manga panel layout requirement:
 9 panels: sacrifice sequence. Tight core close-ups, calm face close-up, then a large white flash panel. The final flash should dominate the page and swallow panel borders.
 
 Panel script:
 ## 1コマ目
 
-マアイが胸部パネルを開く。
-内部コアが光る。
+マアイが上着を脱ぎ、胸部の制御コアを丸見えにする。
+内部コアが強く光る。
+マアイはP19で左腕を失ったまま。左肩は破損して火花が散り、残った右腕だけで上着を開いて脱ぎ、胸部の制御コアを露出させる。
 
 ---
 

@@ -5,6 +5,7 @@
 Create one complete vertical Japanese black-and-white manga page, using the attached character reference images as strict visual canon.
 
 Use the shared style and character settings from `production/style_bible.md` and `production/character_prompts.md`.
+Use the location continuity bible from `production/location_bible.md`.
 
 Page goal: 未分類の反応
 
@@ -19,6 +20,18 @@ Continuity requirements:
 - If adjacent page images are attached, use them only as continuity references for background atmosphere, lighting, debris, smoke, and location.
 - Do not copy the adjacent page panel layout. Do not introduce characters that are not in this page.
 - For P19 specifically, the whole scene remains inside the collapsed ruined building area from P18 and P20. It must not look like a park, tree-lined street, schoolyard, clean sidewalk, or peaceful outdoor path.
+
+Page location requirement:
+Location lock: inside the same quiet abandoned building. Broken windows, moonlight, dust, pillars, rubble, cracked floor.
+
+GRAVE weapon and silhouette requirement:
+GRAVE design lock: if GRAVE appears, follow `production/character_sheets/grave.md` and `images/reference/grave.png` exactly.
+
+MAI damage requirement:
+MAI damage continuity: follow the page script.
+
+Akari injury requirement:
+Akari injury continuity: follow the page script.
 
 Manga panel layout requirement:
 12 panels: delicate conversation rhythm. Use many small quiet reaction panels, a silent beat, and a close-up of MAI's eyes for the unclassified reaction. Let the page breathe despite many panels.
