@@ -188,6 +188,22 @@
         border-color: var(--accent);
       }
 
+      .reading-note {
+        max-width: 900px;
+        margin: 0 auto 2rem;
+        padding: 0.85rem 1rem;
+        border: 1px solid rgba(211, 177, 95, 0.28);
+        background: rgba(211, 177, 95, 0.08);
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.7;
+      }
+
+      .reading-note strong {
+        color: var(--paper);
+        font-weight: 600;
+      }
+
       footer {
         padding: 3rem 1rem 4rem;
         color: var(--muted);
@@ -258,6 +274,11 @@
         <a href="#page-23">23</a>
         <a href="#page-24">24</a>
       </nav>
+
+      <p class="reading-note">
+        <strong>読み順:</strong>
+        この漫画は日本式の右から左へ読むコマ割りではなく、アメリカンコミック風に左から右、上から下へ読み進める配置です。
+      </p>
 
       <section id="reader" class="reader single" aria-label="漫画本文">
         <article class="page" id="page-01"><div class="page-label"><span>P01</span><span>ニュースとタイトル</span></div><img src="images/pages/page_01.png" alt="P01 ニュースとタイトル" loading="lazy"></article>
